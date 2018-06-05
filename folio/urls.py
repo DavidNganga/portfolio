@@ -5,6 +5,7 @@ from django.conf import settings
 
 urlpatterns=[
     url(r'^$',views.index,name='index'),
+    url(r'^project/', views.project, name='project'),
     url(r'^viewproject/', views.viewproject, name='viewproject'),
 
 

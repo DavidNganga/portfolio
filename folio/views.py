@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Project
+from .forms import ProjectForm
 # Create your views here.
 def index(request):
 
@@ -10,11 +11,11 @@ def project(request):
         form = ProjectForm(request.POST, request.FILES)
         if form.is_valid():
             project = form.save(commit=False)
-            project.user = current_user
+
             project.save()
             return redirect('index')
     else:
-        form = ProfileForm()
+        form = ProjectForm()
     return render(request, 'project.html', {"form": form})
 
 def viewproject(request):

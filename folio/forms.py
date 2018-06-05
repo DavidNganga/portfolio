@@ -1,4 +1,4 @@
-from .models import Project,
+from .models import Project
 from django import forms
 
 class ProjectForm(forms.ModelForm):
