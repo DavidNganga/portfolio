@@ -8,18 +8,53 @@
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
 <body>
-
               <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <ul id="navnav">
-                <li id="bran">  <a class="navbar-brand" href="{% url 'index' %}">PORTFOLIO</a>  <a class="navbar-brand" href="{% url 'viewproject' %}">VIEW PROJECTS</a> </li>
+                <div class="container-fluid">
 
 
 
+<br>
+                      <ul class="nav navbar-nav navbar-left">
 
-                <div class="col-sm-4 col-md-4 ">
 
+                                    <!-- <li class="dropdown">
+                                      <a href="#" class="dropdown-toggle btn btn-default" data-toggle="dropdown" role="button" aria-expanded="false">Marvel
+                                                <span class="caret"></span>
+                                            </a>
+                                      <ul class="dropdown-menu" role="menu">
+                                        <li>
+                                          <a href="{%url 'index'%}">Home</a>
+                                        </li>
+                                        <li>
+                                          <a href="{%url 'viewproject'%}">Projects</a>
+                                        </li>
 
-                      </div>
+                                        <li>
+                        <a  class="button" href="{% url 'contact' %}">Contact</a>
+                                        </li>
+                                        <li>
+                                            <a href="{%url 'about' %}">About</a>
+                                        </li>
+
+                                        <li>
+                                          <a href="{%url 'skills' %}">Skills</a>
+                                        </li>
+                                      </ul>
+                                    </li>
+                                  </ul> -->
+
+                                  <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Marvel
+        <span class="caret"></span></button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+          <li role="presentation"><a role="menuitem" tabindex="-1"href="{%url 'index'%}">Home</a> </li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="{%url 'viewproject'%}">Projects</a></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1" href="{% url 'contact' %}">Contact</a></li>
+          <li role="presentation" class="divider"></li>
+          <li role="presentation"><a role="menuitem" tabindex="-1"<a href="{%url 'about' %}">About</a> </li>
+        </ul>
+      </div>
+    </div>
 
               </nav>
 </body>

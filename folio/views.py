@@ -6,6 +6,18 @@ def index(request):
 
     return render (request, 'index.html')
 
+def contact(request):
+
+    return render (request, 'contact.html')
+
+def about(request):
+
+    return render (request, 'about.html')
+
+def skills(request):
+
+    return render (request, 'skills.html')
+
 def project(request):
     if request.method == 'POST':
         form = ProjectForm(request.POST, request.FILES)
